@@ -32,16 +32,118 @@
       .gallery-item:hover .overlay {
         opacity: 1;
       }
+      .glow {
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        border-radius: 100%;
+      }
+
+      .glow-1 {
+        animation: glow1 4s linear infinite;
+      }
+
+      .glow-2 {
+        animation: glow2 4s linear infinite;
+        animation-delay: 100ms;
+      }
+
+      .glow-3 {
+        animation: glow3 4s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      .glow-4 {
+        animation: glow4 4s linear infinite;
+        animation-delay: 300ms;
+      }
+
+      @keyframes glow1 {
+        0% {
+          transform: translate(10%, 10%) scale(1);
+        }
+        25% {
+          transform: translate(-10%, 10%) scale(1);
+        }
+        50% {
+          transform: translate(-10%, -10%) scale(1);
+        }
+        75% {
+          transform: translate(10%, -10%) scale(1);
+        }
+        100% {
+          transform: translate(10%, 10%) scale(1);
+        }
+      }
+
+      @keyframes glow2 {
+        0% {
+          transform: translate(-10%, -10%) scale(1);
+        }
+        25% {
+          transform: translate(10%, -10%) scale(1);
+        }
+        50% {
+          transform: translate(10%, 10%) scale(1);
+        }
+        75% {
+          transform: translate(-10%, 10%) scale(1);
+        }
+        100% {
+          transform: translate(-10%, -10%) scale(1);
+        }
+      }
+
+      @keyframes glow3 {
+        0% {
+          transform: translate(-10%, 10%) scale(1);
+        }
+        25% {
+          transform: translate(-10%, -10%) scale(1);
+        }
+        50% {
+          transform: translate(10%, -10%) scale(1);
+        }
+        75% {
+          transform: translate(10%, 10%) scale(1);
+        }
+        100% {
+          transform: translate(-10%, 10%) scale(1);
+        }
+      }
+
+      @keyframes glow4 {
+        0% {
+          transform: translate(10%, -10%) scale(1);
+        }
+        25% {
+          transform: translate(10%, 10%) scale(1);
+        }
+        50% {
+          transform: translate(-10%, 10%) scale(1);
+        }
+        75% {
+          transform: translate(-10%, -10%) scale(1);
+        }
+        100% {
+          transform: translate(10%, -10%) scale(1);
+        }
+      }
     </style>
   </head>
   <body class="font-sans antialiased">
     <header
-      class="bg-gradient-to-r from-blue-100 to-blue-50 py-4 px-8 shadow-md sticky top-0 z-50"
+      class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl sticky top-0 z-50"
     >
-      <div class="flex items-center space-x-4 justify-center md:justify-start">
-        <i class="fas fa-envelope"></i>
+      <div
+        class="flex items-center space-x-6 pt-2 pb-2 justify-center md:justify-start text-gray-100"
+      >
+        <i class="fas fa-map-marker-alt text-yellow-300"></i>
+        <p>Mahendranagar, Kanchanpur, Nepal</p>
+        <i class="fas fa-envelope text-green-300"></i>
         <p>info@globalschool.edu.np</p>
-        <i class="fas fa-phone"></i>
+        <i class="fas fa-phone text-red-300"></i>
         <p>01-4970590</p>
       </div>
       <div class="container mx-auto flex justify-between items-center">
@@ -49,501 +151,718 @@
           <img
             src="img/logo.png"
             alt="Global Academy Logo"
-            class="w-12 h-12 mr-3 rounded-full"
+            class="w-14 h-14 mr-4 rounded-full ring-4 ring-white"
           />
-          <div class="text-2xl font-semibold text-blue-700">Global Academy</div>
+          <div class="text-3xl font-extrabold text-white tracking-wider">
+            Global Academy
+          </div>
         </div>
-        <nav class="flex space-x-6 items-center">
+        <nav class="flex space-x-8 items-center">
           <a
             href="#"
-            class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 hover:from-purple-300 hover:to-red-300 text-gray-700 font-semibold py-2 px-4 rounded-full shadow-md transform transition-transform hover:scale-105 hover:shadow-lg"
+            class="bg-gradient-to-br from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-semibold py-2 px-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
           >
             <i class="fas fa-home"></i> Home
           </a>
           <a
             href="events.html"
-            class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 hover:from-purple-300 hover:to-red-300 text-gray-700 font-semibold py-2 px-4 rounded-full shadow-md transform transition-transform hover:scale-105 hover:shadow-lg"
+            class="bg-gradient-to-br from-purple-400 to-purple-600 hover:from-purple-500 hover:to-purple-700 text-white font-semibold py-2 px-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
           >
             <i class="fas fa-newspaper"></i> News/Events
           </a>
           <a
             href="#"
-            class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 hover:from-purple-300 hover:to-red-300 text-gray-700 font-semibold py-2 px-4 rounded-full shadow-md transform transition-transform hover:scale-105 hover:shadow-lg"
+            class="bg-gradient-to-br from-pink-400 to-pink-600 hover:from-pink-500 hover:to-pink-700 text-white font-semibold py-2 px-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
           >
             <i class="fas fa-file-invoice-dollar"></i> Payment Notice
           </a>
           <a
             href="admission.html"
-            class="bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-3 px-4 rounded-full shadow-md hover:from-green-500 hover:to-blue-600 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50 transform transition-transform hover:scale-105"
+            class="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-green-500 transform transition-transform hover:scale-110 focus:ring-opacity-50"
           >
             Admission
           </a>
           <a
             href="login.html"
-            class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-purple-500 hover:to-red-500 text-white font-semibold py-3 px-6 rounded-full shadow-md transform transition-transform hover:scale-105 hover:shadow-lg flex items-center"
+            class="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-7 rounded-full shadow-lg transform transition-transform hover:scale-110 flex items-center"
           >
             <span>👤</span> Login
           </a>
           <button
             id="menuButton"
-            class="text-gray-600 text-xl hover:text-gray-900 focus:outline-none"
+            class="text-gray-200 text-2xl hover:text-gray-100 focus:outline-none"
           >
             <i class="fas fa-ellipsis-v"></i>
           </button>
         </nav>
       </div>
     </header>
-    <div
-      id="menu"
-      class="hidden absolute top-20 right-8 w-48 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50"
-    >
-      <ul class="space-y-3">
-        <li>
-          <a
-            href="#"
-            class="block text-sm font-semibold text-gray-700 hover:text-blue-700 hover:bg-blue-50 px-3 py-2 rounded-lg transition duration-200"
-            >Contact Us</a
-          >
-        </li>
-        <li
-          class="flex items-center space-x-2 text-red-600 hover:text-white hover:bg-red-600 px-3 py-2 rounded-lg cursor-pointer transition duration-200"
-        >
-          <i class="fas fa-times"></i>
-          <button
-            id="cancelButton"
-            class="text-sm font-semibold focus:outline-none"
-          >
-            Cancel
-          </button>
-        </li>
-      </ul>
-    </div>
-    <div class="py-3 px-8 bg-gray-100">
-      <div class="container mx-auto flex justify-between items-center">
-        <select
-          id="aboutUsSelect"
-          class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring focus:ring-blue-300 text-gray-700"
-          onchange="location = this.value"
-        >
-          <option value="#">About us</option>
-          <option value="#">Introduction</option>
-          <option value="#">Chairman's Message</option>
-          <option value="#">Message From M.D</option>
-          <option value="#">Principal's Message</option>
-          <option value="#">Team</option>
-          <option value="#">Our Faculty</option>
-          <option value="#">Core Values</option>
-          <option value="#">Our Partners</option>
-          <option value="#">Partnership with Parents</option>
-        </select>
-        <div class="flex space-x-2 items-center">
-          <input
-            type="text"
-            class="border border-gray-300 rounded px-2 py-1 text-gray-700"
-            placeholder="Search..."
-          />
-          <button
-            class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition-colors duration-200"
-          >
-            🔍
-          </button>
-        </div>
-        <select
-          id="programsSelect"
-          class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring focus:ring-blue-300 text-gray-700"
-          onchange="location = this.value"
-        >
-          <option value="#">Programs</option>
-          <option value="#">XIXII Management Stream</option>
-          <option value="#">Pre-School</option>
-          <option value="#">Primary School I – V</option>
-          <option value="#">Secondary School VI – X</option>
-        </select>
-      </div>
-    </div>
-    <div
-      class="relative bg-cover bg-center text-white text-center py-40"
-      style="
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url('img/studying.jpg');
-      "
-    >
+    <main>
       <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"
-      ></div>
-      <div class="relative z-10">
-        <h1 class="text-5xl font-extrabold">Welcome to Global Academy</h1>
-        <div class="max-w-7xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
-          <h1 class="text-4xl font-extrabold text-center mb-8 text-gray-800">
-            Photo & Video Gallery
-          </h1>
-          <p class="text-center text-gray-600 mb-12">
-            Explore our collection of photos and videos showcasing moments that
-            matter the most.
-          </p>
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        id="menu"
+        class="hidden absolute top-20 right-8 w-48 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50"
+      >
+        <ul class="space-y-3">
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-phone-alt text-gray-700"></i>
+            <!-- Added Contact Us Icon -->
+            <a
+              href="#"
+              class="block text-sm font-semibold text-gray-700 hover:text-blue-700 hover:bg-blue-50 px-3 py-2 rounded-lg transition duration-200"
+            >
+              Contact Us
+            </a>
+          </li>
+          <li
+            class="flex items-center space-x-2 text-red-600 hover:text-white hover:bg-red-600 px-3 py-2 rounded-lg cursor-pointer transition duration-200"
           >
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+            <i class="fas fa-times"></i>
+            <button
+              id="cancelButton"
+              class="text-sm font-semibold focus:outline-none"
             >
-              <a
-                href="img/image1.jfif"
-                data-lightbox="gallery"
-                data-title="Image 1"
-              >
-                <img
-                  src="img/image1.jfif"
-                  alt="Image 1"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
-                >
-                  <i class="fas fa-download"></i> Download Image
-                </div>
-              </a>
-            </div>
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              Cancel
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="py-6 px-12 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 shadow-md border-t border-gray-300"
+      >
+        <div
+          class="container mx-auto flex flex-wrap justify-between items-center space-y-6 lg:space-y-0"
+        >
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-blue-800 font-semibold text-lg uppercase tracking-wide relative pb-2 transition-all duration-300"
             >
-              <a
-                href="img/image2.jfif"
-                data-lightbox="gallery"
-                data-title="Image 2"
-              >
-                <img
-                  src="img/image2.jfif"
-                  alt="Image 2"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
-                >
-                  <i class="fas fa-download"></i> Download Image
-                </div>
-              </a>
-            </div>
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              About Us
+              <span
+                class="absolute left-0 bottom-0 w-1/2 h-[2px] bg-blue-800 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white border border-gray-300 rounded-lg shadow-2xl mt-2 w-56 z-50"
             >
-              <a
-                href="img/image3.jfif"
-                data-lightbox="gallery"
-                data-title="Image 3"
-              >
-                <img
-                  src="img/image3.jpeg"
-                  alt="Image 3"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Introduction</a
                 >
-                  <i class="fas fa-download"></i> Download Image
-                </div>
-              </a>
-            </div>
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Chairman's Message</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Message From M.D</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Principal's Message</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Team</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-blue-800 font-semibold text-lg uppercase tracking-wide relative pb-2 transition-all duration-300"
             >
-              <a
-                href="img/image4.jfif"
-                data-lightbox="gallery"
-                data-title="Image 4"
-              >
-                <img
-                  src="img/image4.jfif"
-                  alt="Image 4"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
-                >
-                  <i class="fas fa-download"></i> Download Image
-                </div>
-              </a>
-            </div>
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              services
+              <span
+                class="absolute left-0 bottom-0 w-1/2 h-[2px] bg-blue-800 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white border border-gray-300 rounded-lg shadow-2xl mt-2 w-56 z-50"
             >
-              <a
-                href="https://www.youtube.com/watch?v=EMbwXF7SNGc&pp=ygUcZ2xvYmFsIGFjYWRlbXkgbWFoZW5kcmFuYWdhcg%3D%3D"
-                data-lightbox="gallery"
-                data-title="Video 1"
-              >
-                <img
-                  src="img/videoframe1.png"
-                  alt="Video 1"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >food and snackas</a
                 >
-                  <i class="fas fa-play-circle"></i> Play Video
-                </div>
-              </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >transportation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="h-2 w-30 pt-6 pb-6 bg-none flex flex-col justify-center">
+            <div class="relative p-1 w-full sm:max-w-2xl sm:mx-auto">
+              <div class="overflow-hidden z-0 rounded-full relative p-3">
+                <form
+                  role="form"
+                  class="relative flex z-50 bg-white rounded-full"
+                >
+                  <input
+                    type="text"
+                    placeholder="enter your search here"
+                    class="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none"
+                  />
+                  <button
+                    class="bg-indigo-500 text-white rounded-full font-semibold px-8 py-4 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none"
+                  >
+                    Search
+                  </button>
+                </form>
+                <div class="glow glow-1 z-10 bg-pink-400 absolute"></div>
+                <div class="glow glow-2 z-20 bg-purple-400 absolute"></div>
+                <div class="glow glow-3 z-30 bg-yellow-400 absolute"></div>
+                <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>
+              </div>
             </div>
-            <div
-              class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-blue-800 font-semibold text-lg uppercase tracking-wide relative pb-2 transition-all duration-300"
             >
-              <a
-                href="https://www.youtube.com/watch?v=CM4_DmW6F3M&pp=ygUcZ2xvYmFsIGFjYWRlbXkgbWFoZW5kcmFuYWdhcg%3D%3D"
-                data-lightbox="gallery"
-                data-title="Video 2"
-              >
-                <img
-                  src="img/videoframe2.png"
-                  alt="Video 2"
-                  class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
-                />
-                <div
-                  class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+              Programs
+              <span
+                class="absolute right-0 bottom-0 w-1/2 h-[2px] bg-blue-800 transition-all duration-300 group-hover:w-full left-auto"
+              ></span>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-white border border-gray-300 rounded-lg shadow-2xl mt-2 w-56 z-50 right-0"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >XIXII Management Stream</a
                 >
-                  <i class="fas fa-play-circle"></i> Play Video
-                </div>
-              </a>
-            </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Pre-School</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Primary School I – V</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-800 transition duration-200"
+                  >Secondary School VI – X</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div id="fb-root"></div>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
-    ></script>
-    <div class="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
-      <div class="container mx-auto">
-        <h2 class="text-center text-4xl font-extrabold text-blue-700 mb-8">
-          Stay Connected with Global Academy
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <img
-              src="img/download1.jfif"
-              alt="Global Academy"
-              class="w-full h-auto md:w-[600px] md:h-[650px] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
+
+      <div
+        class="relative bg-cover bg-center text-white text-center py-40"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('img/studying.jpg');
+        "
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"
+        ></div>
+        <div class="relative z-10">
+          <h1 class="text-5xl font-extrabold">Welcome to Global Academy</h1>
           <div
-            class="w-full bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            class="max-w-7xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg"
           >
-            <div class="p-20">
+            <h1 class="text-4xl font-extrabold text-center mb-8 text-gray-800">
+              Photo & Video Gallery
+            </h1>
+            <p class="text-center text-gray-600 mb-12">
+              Explore our collection of photos and videos showcasing moments
+              that matter the most.
+            </p>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
               <div
-                class="fb-page"
-                data-href="https://www.facebook.com/globalacademy.edu.np"
-                data-tabs="timeline"
-                data-width="1000"
-                data-height="500"
-                data-small-header="false"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true"
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
               >
-                <blockquote
-                  cite="https://www.facebook.com/globalacademy.edu.np"
-                  class="fb-xfbml-parse-ignore"
+                <a
+                  href="img/image1.jfif"
+                  data-lightbox="gallery"
+                  data-title="Image 1"
                 >
-                  <a href="https://www.facebook.com/globalacademy.edu.np"
-                    >Global Academy</a
+                  <img
+                    src="img/image1.jfif"
+                    alt="Image 1"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
                   >
-                </blockquote>
+                    <i class="fas fa-download"></i> Download Image
+                  </div>
+                </a>
+              </div>
+              <div
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              >
+                <a
+                  href="img/image2.jfif"
+                  data-lightbox="gallery"
+                  data-title="Image 2"
+                >
+                  <img
+                    src="img/image2.jfif"
+                    alt="Image 2"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+                  >
+                    <i class="fas fa-download"></i> Download Image
+                  </div>
+                </a>
+              </div>
+              <div
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              >
+                <a
+                  href="img/image3.jfif"
+                  data-lightbox="gallery"
+                  data-title="Image 3"
+                >
+                  <img
+                    src="img/image3.jpeg"
+                    alt="Image 3"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+                  >
+                    <i class="fas fa-download"></i> Download Image
+                  </div>
+                </a>
+              </div>
+              <div
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              >
+                <a
+                  href="img/image4.jfif"
+                  data-lightbox="gallery"
+                  data-title="Image 4"
+                >
+                  <img
+                    src="img/image4.jfif"
+                    alt="Image 4"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+                  >
+                    <i class="fas fa-download"></i> Download Image
+                  </div>
+                </a>
+              </div>
+              <div
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              >
+                <a
+                  href="https://www.youtube.com/watch?v=EMbwXF7SNGc&pp=ygUcZ2xvYmFsIGFjYWRlbXkgbWFoZW5kcmFuYWdhcg%3D%3D"
+                  data-lightbox="gallery"
+                  data-title="Video 1"
+                >
+                  <img
+                    src="img/videoframe1.png"
+                    alt="Video 1"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+                  >
+                    <i class="fas fa-play-circle"></i> Play Video
+                  </div>
+                </a>
+              </div>
+              <div
+                class="gallery-item relative rounded-lg shadow-md overflow-hidden group"
+              >
+                <a
+                  href="https://www.youtube.com/watch?v=CM4_DmW6F3M&pp=ygUcZ2xvYmFsIGFjYWRlbXkgbWFoZW5kcmFuYWdhcg%3D%3D"
+                  data-lightbox="gallery"
+                  data-title="Video 2"
+                >
+                  <img
+                    src="img/videoframe2.png"
+                    alt="Video 2"
+                    class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  />
+                  <div
+                    class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 flex items-center justify-center text-white text-lg font-bold"
+                  >
+                    <i class="fas fa-play-circle"></i> Play Video
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="py-16 px-6 bg-gray-100">
-      <div class="container mx-auto">
-        <h2 class="text-center text-4xl font-bold text-blue-600 mb-10">
-          Introduction
-        </h2>
-        <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-          <p class="text-gray-800 text-lg leading-relaxed">
-            It is the aim of
-            <span class="font-bold text-blue-600">Global Academy</span> to
-            provide <span class="font-bold">K-12 education</span> that every
-            student deserves. We, at Global School, appreciate diversity and
-            realize that each student is different and should be treated as a
-            <span class="italic">unique individual</span>. Our constant endeavor
-            is to help each student realize their full potential and discover
-            new horizons in learning.
-          </p>
-          <p class="mt-6 text-gray-800 text-lg leading-relaxed">
-            We believe in bringing out the best in our students so that they can
-            rise to the top, empowered by a belief in
-            <span class="font-bold text-blue-600"
-              >unlimited human potential</span
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"
+      ></script>
+      <div
+        class="py-16 bg-gradient-to-r bg-[url('img/adult-education-book-books-know.jpg')] bg-cover bg-center min-h-screen transition-all duration-500 ease-in-out hover:scale-105 flex items-center"
+      >
+        <div class="container mx-auto">
+          <h2 class="text-center text-4xl font-extrabold text-blue-700 mb-8">
+            Stay Connected with Global Academy
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <img
+                src="img/download1.jfif"
+                alt="Global Academy"
+                class="w-full h-auto md:w-[600px] md:h-[650px] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              />
+            </div>
+            <div
+              class="w-full bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
-            At Global School, creativity is nurtured, with learners treated as
-            passionate seekers of knowledge and discovery—not as rote machines.
-          </p>
-          <p class="mt-6 text-gray-800 text-lg leading-relaxed">
-            In terms of overall academic orientation, we place a pronounced
-            emphasis on
-            <span class="font-bold text-green-500"
-              >Science, Technology, English, Arts, and Mathematics (STEAM)</span
-            >, along with other domains critical to overall academic achievement
-            and sustained academic excellence.
-          </p>
+              <div class="p-20">
+                <div
+                  class="fb-page"
+                  data-href="https://www.facebook.com/globalacademy.edu.np"
+                  data-tabs="timeline"
+                  data-width="1000"
+                  data-height="500"
+                  data-small-header="false"
+                  data-adapt-container-width="true"
+                  data-hide-cover="false"
+                  data-show-facepile="true"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/globalacademy.edu.np"
+                    class="fb-xfbml-parse-ignore"
+                  >
+                    <a href="https://www.facebook.com/globalacademy.edu.np"
+                      >Global Academy</a
+                    >
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
-      <div class="container mx-auto">
-        <h2 class="text-center text-4xl font-extrabold text-blue-700 mb-8">
-          Find Us Here
-        </h2>
-        <div
-          class="max-w-5xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden"
-        >
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Our Location
-            </h3>
-            <p class="text-gray-600 mb-6">
-              Visit us at Tikapur, Kailali, Nepal for a personalized experience
-              and to explore our vibrant campus.
-            </p>
-          </div>
-          <div class="h-96">
-            <iframe
-              class="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16717.79832023987!2d80.16851673620052!3d28.95866220806772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1ac0661bd4df9%3A0x20f7b19dddb21d00!2sGlobal%20Academy%20Secondary%20School%20-%20Best%20School%20in%20Mahendranagar%2C%20Kanchanpur%2C%20Nepal!5e0!3m2!1sen!2snp!4v1741780445327!5m2!1sen!2snp"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="p-6 bg-blue-50">
-            <p class="text-gray-600 text-center">
-              For assistance, contact us via email at
-              <span class="text-blue-600 font-semibold"
-                >info@globalschool.edu.np</span
+
+      <div
+        class="py-20 bg-[url('img/schoollife.jpg')] bg-cover bg-center text-purple-900"
+      >
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <!-- News Icon -->
+            <div class="group">
+              <a
+                href="news.html"
+                class="flex flex-col items-center hover:text-blue-400"
               >
-              or call at
-              <span class="text-blue-600 font-semibold">01-4970590</span>.
+                <i
+                  class="fas fa-newspaper fa-8x mb-6 group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <!-- News Icon -->
+                <span class="text-2xl font-extrabold">Recent News</span>
+              </a>
+            </div>
+
+            <!-- Events Icon -->
+            <div class="group">
+              <a
+                href="events.html"
+                class="flex flex-col items-center hover:text-green-400"
+              >
+                <i
+                  class="fas fa-calendar-check fa-8x mb-6 group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <!-- Events Icon -->
+                <span class="text-2xl font-extrabold">Recent Events</span>
+              </a>
+            </div>
+
+            <!-- Contact Icon -->
+            <div class="group">
+              <a
+                href="contact.html"
+                class="flex flex-col items-center hover:text-red-400"
+              >
+                <i
+                  class="fas fa-comments fa-8x mb-6 group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                <!-- Contact Icon -->
+                <span class="text-2xl font-extrabold">Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="py-16 px-6 bg-gray-100 bg-[url('img/wp2036000.jpg')] bg-cover bg-center min-h-screen transition-all duration-500 ease-in-out hover:scale-105 flex items-center"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="text-center text-4xl font-extrabold text-blue-600 mb-10 drop-shadow-lg animate-fade-in-up"
+          >
+            Introduction
+          </h2>
+          <div
+            class="max-w-4xl mx-auto bg-black bg-opacity-80 shadow-2xl rounded-lg p-8 text-white hover:scale-105 hover:shadow-3xl transition-transform duration-700 ease-in-out mt-10"
+          >
+            <p class="text-lg leading-relaxed">
+              It is the aim of
+              <span class="font-bold text-blue-400">Global Academy</span> to
+              provide <span class="font-bold">K-12 education</span> that every
+              student deserves. We, at Global School, appreciate diversity and
+              realize that each student is different and should be treated as a
+              <span class="italic">unique individual</span>. Our constant
+              endeavor is to help each student realize their full potential and
+              discover new horizons in learning.
+            </p>
+            <p class="mt-6 text-lg leading-relaxed">
+              We believe in bringing out the best in our students so that they
+              can rise to the top, empowered by a belief in
+              <span class="font-bold text-blue-400"
+                >unlimited human potential</span
+              >
+              At Global School, creativity is nurtured, with learners treated as
+              passionate seekers of knowledge and discovery—not as rote
+              machines.
+            </p>
+            <p class="mt-6 text-lg leading-relaxed">
+              In terms of overall academic orientation, we place a pronounced
+              emphasis on
+              <span class="font-bold text-green-400"
+                >Science, Technology, English, Arts, and Mathematics
+                (STEAM)</span
+              >, along with other domains critical to overall academic
+              achievement and sustained academic excellence.
             </p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="py-16 bg-gray-100">
-      <div class="container mx-auto">
-        <h2 class="text-center text-4xl font-bold text-blue-600 mb-10">
-          Why Choose Us?
-        </h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          <div
-            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+
+      <div
+        class="py-16 bg-[url('img/location.jpg')] bg-cover bg-center bg-fixed"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="text-center text-4xl font-extrabold text-black mb-8 drop-shadow-lg"
           >
-            <i class="fas fa-futbol text-blue-500 text-5xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Spacious Playground</h3>
-            <p class="text-gray-600">
-              Well-ventilated classrooms that foster a conducive learning
-              environment.
-            </p>
-          </div>
+            Find Us Here
+          </h2>
           <div
-            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+            class="max-w-5xl mx-auto bg-white bg-opacity-90 rounded-lg shadow-2xl overflow-hidden"
           >
-            <i class="fas fa-flask text-green-500 text-5xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Excellent Labs</h3>
-            <p class="text-gray-600">
-              State-of-the-art, well-equipped laboratories for practical
-              learning.
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
-          >
-            <i class="fas fa-chart-line text-yellow-500 text-5xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">C.C.E.</h3>
-            <p class="text-gray-600">
-              Continuous & Comprehensive Evaluation for holistic academic
-              development.
-            </p>
-          </div>
-          <div
-            class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
-          >
-            <i class="fas fa-check-circle text-red-500 text-5xl mb-4"></i>
-            <h3 class="text-xl font-semibold mb-2">Government Approved</h3>
-            <p class="text-gray-600">
-              Proudly approved by the Ministry of Education, Nepal.
-            </p>
+            <!-- Location Section -->
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Our Location
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Visit us at Mahendranagar,Kanchanpur, Nepal for a personalized
+                experience and to explore our vibrant campus.
+              </p>
+            </div>
+            <!-- Google Maps -->
+            <div class="h-96">
+              <iframe
+                class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16717.79832023987!2d80.16851673620052!3d28.95866220806772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1ac0661bd4df9%3A0x20f7b19dddb21d00!2sGlobal%20Academy%20Secondary%20School%20-%20Best%20School%20in%20Mahendranagar%2C%20Kanchanpur%2C%20Nepal!5e0!3m2!1sen!2snp!4v1741780445327!5m2!1sen!2snp"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <!-- Contact Section -->
+            <div class="p-6 bg-blue-50">
+              <p class="text-gray-600 text-center">
+                For assistance, contact us via email at
+                <span class="text-blue-600 font-semibold"
+                  >info@globalschool.edu.np</span
+                >
+                or call at
+                <span class="text-blue-600 font-semibold">01-4970590</span>.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="py-16 bg-gray-100">
-      <div class="container mx-auto">
-        <h2 class="text-center text-4xl font-semibold mb-10">Our Highlights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="flex flex-col items-center">
-            <i class="fas fa-user-graduate text-blue-600 text-6xl mb-4"></i>
-            <p class="text-4xl font-bold text-blue-600">
-              <span id="studentsCounter">1,000</span>
-            </p>
-            <p class="text-gray-700 mt-2 text-lg">Students</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <i class="fas fa-star text-yellow-500 text-6xl mb-4"></i>
-            <p class="text-4xl font-bold text-yellow-500">
-              <span id="excellenceCounter">100%</span>
-            </p>
-            <p class="text-gray-700 mt-2 text-lg">Excellence</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <i class="fas fa-handshake text-green-500 text-6xl mb-4"></i>
-            <p class="text-4xl font-bold text-green-500">
-              <span id="serviceCounter">100%</span>
-            </p>
-            <p class="text-gray-700 mt-2 text-lg">Service</p>
+
+      <div
+        class="py-16 bg-[url('img/img.avif')] bg-cover bg-center bg-fixed text-white"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="text-center text-4xl font-bold text-white mb-10 drop-shadow-lg"
+          >
+            Why Choose Us?
+          </h2>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <!-- Spacious Playground -->
+            <div
+              class="flex flex-col items-center bg-white bg-opacity-80 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+            >
+              <i class="fas fa-futbol text-blue-500 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Spacious Playground
+              </h3>
+              <p class="text-gray-700">
+                Well-ventilated classrooms that foster a conducive learning
+                environment.
+              </p>
+            </div>
+            <!-- Excellent Labs -->
+            <div
+              class="flex flex-col items-center bg-white bg-opacity-80 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+            >
+              <i class="fas fa-flask text-green-500 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Excellent Labs
+              </h3>
+              <p class="text-gray-700">
+                State-of-the-art, well-equipped laboratories for practical
+                learning.
+              </p>
+            </div>
+            <!-- C.C.E. -->
+            <div
+              class="flex flex-col items-center bg-white bg-opacity-80 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+            >
+              <i class="fas fa-chart-line text-yellow-500 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">C.C.E.</h3>
+              <p class="text-gray-700">
+                Continuous & Comprehensive Evaluation for holistic academic
+                development.
+              </p>
+            </div>
+            <!-- Government Approved -->
+            <div
+              class="flex flex-col items-center bg-white bg-opacity-80 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition duration-200"
+            >
+              <i class="fas fa-check-circle text-red-500 text-5xl mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                Government Approved
+              </h3>
+              <p class="text-gray-700">
+                Proudly approved by the Ministry of Education, Nepal.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="py-16 bg-gray-100">
+        <div class="container mx-auto">
+          <h2 class="text-center text-4xl font-semibold mb-10">
+            Our Highlights
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="flex flex-col items-center">
+              <i class="fas fa-user-graduate text-blue-600 text-6xl mb-4"></i>
+              <p class="text-4xl font-bold text-blue-600">
+                <span id="studentsCounter">1,000</span>
+              </p>
+              <p class="text-gray-700 mt-2 text-lg">Students</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-star text-yellow-500 text-6xl mb-4"></i>
+              <p class="text-4xl font-bold text-yellow-500">
+                <span id="excellenceCounter">100%</span>
+              </p>
+              <p class="text-gray-700 mt-2 text-lg">Excellence</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fas fa-handshake text-green-500 text-6xl mb-4"></i>
+              <p class="text-4xl font-bold text-green-500">
+                <span id="serviceCounter">100%</span>
+              </p>
+              <p class="text-gray-700 mt-2 text-lg">Service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="bg-gray-800 text-white py-12">
       <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          <!-- Useful Links Section -->
           <div class="col-span-1">
             <h3 class="font-bold mb-4 text-center md:text-left">
               Useful Links
             </h3>
             <ul class="space-y-2 text-center md:text-left">
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-info-circle"></i>
                 <a
                   href="#"
-                  class="hover:text-blue-300 transition-colors duration-20"
+                  class="hover:text-blue-300 transition-colors duration-200"
                   >About Us</a
                 >
               </li>
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-book"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
                   >Programs</a
                 >
               </li>
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-user-check"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
                   >Admission</a
                 >
               </li>
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-calendar-alt"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
@@ -552,26 +871,31 @@
               </li>
             </ul>
           </div>
+
+          <!-- Quick Access Section -->
           <div class="col-span-1">
             <h3 class="font-bold mb-4 text-center md:text-left">
               Quick Access
             </h3>
             <ul class="space-y-2 text-center md:text-left">
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-file-alt"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
                   >Student Forms</a
                 >
               </li>
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-bell"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
                   >Payment Notice</a
                 >
               </li>
-              <li>
+              <li class="flex items-center space-x-2">
+                <i class="fas fa-phone-alt"></i>
                 <a
                   href="#"
                   class="hover:text-blue-300 transition-colors duration-200"
@@ -580,11 +904,18 @@
               </li>
             </ul>
           </div>
+
+          <!-- Address Section -->
           <div class="col-span-1">
             <h3 class="font-bold mb-4 text-center md:text-left">Address</h3>
-            <p class="text-center md:text-left">
-              mahendranagar,kanchanpur, Nepal
-            </p>
+            <div
+              class="flex items-center space-x-2 mt-2 justify-center md:justify-start"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              <!-- Location Icon -->
+              <p>Mahendranagar, Kanchanpur, Nepal</p>
+            </div>
+
             <div
               class="flex items-center space-x-2 mt-2 justify-center md:justify-start"
             >
@@ -605,36 +936,259 @@
             </div>
           </div>
         </div>
+
+        <!-- Bottom Section -->
         <div class="text-center mt-8 border-t border-gray-700 pt-6">
-          <p>"Helping Students Grow Into Leaders of Today and Tomorrow"</p>
+          <p>"Knowledge is not power, application of knowledge is power."</p>
           <div class="flex justify-center space-x-4 mt-4">
             <a
               href="https://facebook.com"
               target="_blank"
               aria-label="Facebook"
               class="hover:text-blue-300 transition-colors duration-200"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
             <a
               href="https://instagram.com"
               target="_blank"
               aria-label="Instagram"
               class="hover:text-pink-500 transition-colors duration-200"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
             <a
               href="https://tiktok.com"
               target="_blank"
               aria-label="TikTok"
               class="hover:text-gray-300 transition-colors duration-200"
-              ><i class="fab fa-tiktok"></i
-            ></a>
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
           </div>
           <p class="mt-4">© 2024 Global Academy School. All rights reserved.</p>
         </div>
       </div>
     </footer>
+
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector('input[type="text"]');
+        const searchForm = document.querySelector("form");
+        const suggestionsList = document.createElement("ul");
+        const noResults = document.createElement("div");
+        let searchPerformed = false; // Track whether a search has been performed
+
+        // Initialize suggestions list and no-results message
+        suggestionsList.classList.add("suggestions");
+        searchInput.parentNode.appendChild(suggestionsList);
+
+        noResults.classList.add("no-results");
+        noResults.textContent = "No results found.";
+        noResults.style.display = "none";
+        searchInput.parentNode.appendChild(noResults);
+
+        // Handle form submission
+        searchForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          performSearch();
+          suggestionsList.style.display = "none";
+        });
+
+        // Handle Enter key for search
+        searchInput.addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+            suggestionsList.style.display = "none";
+          }
+        });
+
+        // Handle input for suggestions
+        searchInput.addEventListener("input", function () {
+          generateSuggestions(sanitizeInput(searchInput.value.toLowerCase()));
+        });
+
+        function sanitizeInput(input) {
+          return input.replace(/[^a-zA-Z0-9\s]/g, ""); // Remove unwanted characters
+        }
+
+        function generateSuggestions(searchTerm) {
+          suggestionsList.innerHTML = "";
+          if (!searchTerm) {
+            suggestionsList.style.display = "none";
+            return;
+          }
+
+          const allTextElements = document.querySelectorAll(
+            "p, a, span, div, h1, h2, h3, h4, h5, h6"
+          );
+          const suggestions = new Set();
+          const maxSuggestions = 5;
+
+          // Find matching suggestions
+          allTextElements.forEach((element) => {
+            const text = element.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+              const words = text.split(/\s+/);
+              words.forEach((word) => {
+                const cleanWord = word.replace(/[^a-z0-9]/gi, "");
+                if (
+                  cleanWord.toLowerCase().startsWith(searchTerm) &&
+                  cleanWord
+                ) {
+                  suggestions.add(cleanWord);
+                }
+              });
+            }
+          });
+
+          // Display suggestions
+          if (suggestions.size > 0) {
+            suggestionsList.style.display = "block";
+            let suggestionCount = 0;
+            suggestions.forEach((suggestion) => {
+              if (suggestionCount < maxSuggestions) {
+                const li = document.createElement("li");
+                li.textContent = suggestion; // Set text content directly
+                li.addEventListener("click", function () {
+                  searchInput.value = suggestion;
+                  suggestionsList.style.display = "none";
+                  performSearch();
+                });
+                suggestionsList.appendChild(li);
+                suggestionCount++;
+              }
+            });
+          } else {
+            suggestionsList.style.display = "none";
+          }
+        }
+
+        function performSearch() {
+          const searchTerm = sanitizeInput(
+            searchInput.value.trim().toLowerCase()
+          );
+          const allLinks = document.querySelectorAll("a");
+
+          // Check if any link matches the search term
+          for (const link of allLinks) {
+            const linkText = link.textContent.trim().toLowerCase();
+            if (linkText === searchTerm) {
+              searchPerformed = true; // Mark search as performed
+              if (link.target === "_blank") {
+                window.open(encodeURI(link.href), "_blank");
+              } else {
+                window.location.href = encodeURI(link.href);
+              }
+              return;
+            }
+          }
+
+          // Highlight matching elements in the content
+          const allTextElements = document.querySelectorAll(
+            "p, a, span, div, h1, h2, h3, h4, h5, h6"
+          );
+          resetHighlights();
+
+          let resultsFound = false;
+
+          if (searchTerm) {
+            const regex = new RegExp(`\\b${escapeRegExp(searchTerm)}\\b`, "gi");
+
+            allTextElements.forEach((element) => {
+              const text = element.textContent.toLowerCase();
+              if (regex.test(text)) {
+                resultsFound = true;
+                element.innerHTML = element.innerHTML.replace(
+                  regex,
+                  (match) => `<span class="highlighted">${match}</span>`
+                );
+              }
+            });
+
+            if (resultsFound) {
+              searchPerformed = true; // Mark search as performed
+              noResults.style.display = "none";
+            } else {
+              noResults.style.display = "block";
+              setTimeout(() => {
+                noResults.style.display = "none";
+              }, 3000);
+            }
+          } else {
+            noResults.style.display = "none";
+          }
+        }
+
+        function resetHighlights() {
+          const highlightedElements = document.querySelectorAll(".highlighted");
+          highlightedElements.forEach((element) => {
+            element.outerHTML = element.innerHTML;
+          });
+        }
+
+        function escapeRegExp(string) {
+          return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        }
+
+        // Style injection for UI
+        const style = document.createElement("style");
+        style.textContent = `
+        .highlighted {
+            background-color: #ffe066;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .suggestions {
+            list-style: none;
+            padding: 8px;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            position: absolute;
+            background-color: white;
+            width: calc(100% - 2px);
+            z-index: 10;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 16px;
+        }
+        .suggestions li {
+            padding: 8px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .suggestions li:last-child {
+            border-bottom: none;
+        }
+        .suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+        .no-results {
+            padding: 10px;
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+    `;
+        document.head.appendChild(style);
+
+        // Refresh page when clicking outside after search
+        document.body.addEventListener("click", function (event) {
+          if (
+            searchPerformed && // Only refresh if a search has been performed
+            !searchInput.contains(event.target) &&
+            !suggestionsList.contains(event.target)
+          ) {
+            location.reload();
+          }
+        });
+      });
+
       const menuButton = document.getElementById("menuButton");
       const menu = document.getElementById("menu");
       const cancelButton = document.getElementById("cancelButton");
@@ -696,6 +1250,21 @@
         wrapAround: true,
         alwaysShowNavOnTouchDevices: true,
       });
+      module.exports = {
+        theme: {
+          extend: {
+            animation: {
+              "fade-in-up": "fadeInUp 1s ease-in-out",
+            },
+            keyframes: {
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "500%": { opacity: "1", transform: "translateY(0px)" },
+              },
+            },
+          },
+        },
+      };
     </script>
   </body>
 </html>
